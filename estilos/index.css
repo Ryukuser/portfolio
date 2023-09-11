@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+
+    --fonte-primaria:'Krona One', sans-serif ;
+    --fonte-secundaria:'Montserrat', sans-serif;
+}
+
+*{
+    
+    margin: 0;
+    padding: 0; /*margin e espaçamentop da pagina ao todo */
+}
+
+body{
+
+    
+    box-sizing: border-box; /*Cria uma borda e espaçamento para o element filho onde sempre se adpta ao elemnto PAI */
+    /*height: 100vh; /*100% da largura da tela*/
+    background-color: var(--cor-primaria); /*cor de fundo do portifolio*/
+    color: var(--cor-secundaria); /*cor do texto */
+   
+
+}
+.cabecalho{
+
+    padding: 2% 0% 0% 15%;
+
+}
+
+.cabecalho__menu{
+
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;  /*redimensiona o conteudo baseado na class apresentacao = main*/
+    align-items: center; /*alinha os itens no centro da tela*/
+    justify-content: space-between; /*espaçamento entre  os elemntos */
+    /*margin: 10px; /*VALOR ORIGINAL 10PX cria uma margem da class apartir dos elementos da tela ATENCAOOOOOOOO AQUI !!!*/ 
+    gap: 82px;
+
+}
+
+.apresentacao__conteudo{/*apresentação do conteudo */
+
+    width: 50%; /* ORIGINAL 615 MAS MUDEI PRA 600 alinha o conteudo do texto em relação ao proporção*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__titulo{/*titulo*/
+    
+    font-size: 2.25rem; /*tamanho do texto do titulo*/ 
+    font-family: var(--fonte-primaria); /*font importada do google fonts*/
+    
+}
+
+
+.Titulo-Destaque{
+
+    color: var(--cor-terciaria); /*cor do titulo de destaque */ 
+    
+}
+
+
+
+.apresentacao__conteudo__texto{/*conteudo abaixo do titulo */
+    /*margin-top: 40px;/*OPCIONAL MEU PRA DAS ESPAÇAMENTO ENTRE OS BOTOES E O SEGUNDO TITULO */
+    font-size: 1.5rem; /* tamanho da font do texto conteudo */
+    font-family: var(--fonte-secundaria)
+    
+}
+
+.apresentacao__links{ /* posicionamento dos botoes*/ 
+
+    margin-top: 40px; /*OPCIONAL MEU PRA DAS ESPAÇAMENTO ENTRE OS BOTOES E O SEGUNDO TITULO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fonte-secundaria);
+    justify-content: space-between;
+    gap: 32px;
+     
+
+}
+
+.apresentacao__links__subtitulos{
+
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem; /* ORGINAL É 24 MAS BOTEI 12*/
+
+
+}
+
+.apresentacao__links__navegacao{ /*ancoragem botoes */
+
+    /*background-color: #22d4fd; cor de fundo botao */
+    display: flex;
+    justify-content: center;
+    gap: 16px;/*16 px original */
+    border: 2px solid var(--cor-terciaria); /*Borda do bota*/
+    width: 378px; /*tamanho do botao*/
+    text-align: center;
+    border-radius: 8px; /*arrendodamento do botao*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria); /*cor texto do bota */
+    font-family: var(--fonte-secundaria);
+    
+}
+.apresentacao__links__link:hover{ /*HOVER: tudo que o mouse passar por cima muda elemntos aqui */
+
+    background-color: var(--cor-hover);
+
+}
+
+.image{
+
+    width: 50%;
+
+}
+.rodape{
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px)  {
+    .cabecalho{
+        padding: 10%;
+
+    }
+
+    .cabecalho__menu{
+
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .apresentacao__conteudo{
+
+        width: auto;
+    }
+
+}
